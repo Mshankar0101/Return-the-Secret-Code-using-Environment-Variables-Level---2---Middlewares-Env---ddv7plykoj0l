@@ -26,7 +26,7 @@ app.get('/api/get-env', (req, res) => {
   //Write your code here
   const secretKey = process.env.SECRET;
     const encryptedData = encryptString(secretKey);
-    res.send(200).send({"secret":encryptedData})
+    res.send(200).send({"secret":`${encryptedData}`})
 });
 
 module.exports = app;
